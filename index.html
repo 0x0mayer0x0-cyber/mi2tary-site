@@ -40,6 +40,7 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:21px;letter-spacing:2px;color:transparent;-webkit-text-stroke:0.6px rgba(180,235,230,0.7);}
 .logo span{color:transparent;-webkit-text-stroke:0.6px var(--c);text-shadow:0 0 4px rgba(0,229,204,0.5);}
+.nav-logo-img{height:26px;width:auto;display:block;filter:drop-shadow(0 0 4px rgba(0,229,204,0.4));}
 .nav-links{display:none;gap:28px;font-size:14px;color:var(--gray2);}
 .nav-links a:hover{color:var(--c);}
 @media(min-width:760px){.nav-links{display:flex;}}
@@ -161,7 +162,7 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
 
 <nav>
   <div class="wrap nav-in">
-    <a href="#top" class="logo">MI<span>2</span>TARY</a>
+    <a href="#top" class="logo"><img src="logo-m2.png" alt="MI2TARY" class="nav-logo-img"></a>
     <div class="nav-links">
       <a href="#features">Возможности</a>
       <a href="#games">Игры</a>
