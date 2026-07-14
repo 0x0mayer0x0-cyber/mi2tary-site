@@ -4,7 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MI2TARY — ИИ-ассистент в Telegram</title>
+<link rel="icon" type="image/png" href="logo-m2.png">
 <meta name="description" content="MI2TARY — ИИ-ассистент нового поколения в Telegram: умный чат, генерация изображений, мини-игры и система баллов M2.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="MI2TARY — ИИ-ассистент нового поколения">
+<meta property="og:description" content="Умный чат на нескольких ИИ-моделях, генерация изображений, анализ документов и мини-игры — всё внутри Telegram, без установки приложений.">
+<meta property="og:image" content="https://0x0mayer0x0-cyber.github.io/mi2tary-site/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://0x0mayer0x0-cyber.github.io/mi2tary-site/">
+<meta property="og:site_name" content="MI2TARY">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MI2TARY — ИИ-ассистент нового поколения">
+<meta name="twitter:description" content="Умный чат на нескольких ИИ-моделях, генерация изображений, анализ документов и мини-игры — всё внутри Telegram.">
+<meta name="twitter:image" content="https://0x0mayer0x0-cyber.github.io/mi2tary-site/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
@@ -55,7 +69,7 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
 .mobile-menu a{padding:16px 4px;border-bottom:1px solid rgba(0,229,204,0.1);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:17px;}
 @media(min-width:760px){.mobile-menu{display:none;}}
 .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.5px;
-  padding:11px 22px;border-radius:11px;border:1px solid var(--c);color:var(--bg);background:var(--c);box-shadow:0 0 18px rgba(0,229,204,0.35);white-space:nowrap;}
+  padding:11px 22px;border-radius:11px;border:1px solid var(--c);color:var(--bg);background:var(--c);box-shadow:0 0 18px rgba(0,229,204,0.35);white-space:nowrap;transition:transform .15s ease-out;}
 .btn:active{transform:scale(0.97);}
 .btn-ghost{background:transparent;color:var(--c);box-shadow:none;}
 
@@ -69,7 +83,21 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
   0%,3%,5%,7%,100%{opacity:1;text-shadow:0 0 4px rgba(0,229,204,0.7),0 0 14px rgba(0,229,204,0.5);}
   4%,6%{opacity:0.5;text-shadow:0 0 2px rgba(0,229,204,0.3);}
 }
-.hero p{max-width:560px;margin:0 auto 40px;color:#a9c0c4;font-size:18px;line-height:1.65;font-weight:400;}
+.hero p{max-width:560px;margin:0 auto 24px;color:#a9c0c4;font-size:18px;line-height:1.65;font-weight:400;}
+
+.typing-line{font-family:'Share Tech Mono',monospace;font-size:15px;color:var(--cl);min-height:22px;margin-bottom:22px;}
+.typing-prefix{color:var(--c);}
+.typing-cursor{animation:blink-cursor 1s step-start infinite;}
+@keyframes blink-cursor{50%{opacity:0;}}
+
+.chip-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:34px;}
+.chip{font-family:'Share Tech Mono',monospace;font-size:11.5px;letter-spacing:1px;color:var(--c);border:1px solid rgba(0,229,204,0.3);
+  border-radius:20px;padding:6px 14px;background:rgba(0,229,204,0.05);animation:chip-float 4s ease-in-out infinite;}
+.chip:nth-child(2){animation-delay:.3s;}
+.chip:nth-child(3){animation-delay:.6s;}
+.chip:nth-child(4){animation-delay:.9s;}
+.chip:nth-child(5){animation-delay:1.2s;}
+@keyframes chip-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-5px);}}
 .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 .hero-tag{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--gray2);margin-top:38px;}
 
@@ -89,11 +117,29 @@ section{padding:110px 0;}
 .sec-head h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(30px,5vw,42px);letter-spacing:0.5px;margin-top:12px;line-height:1.15;}
 .why-text{max-width:640px;margin:0 auto;}
 .why-text p{font-size:16.5px;line-height:1.8;margin-bottom:18px;color:#c7d0d6;}
+.watermark-m2{position:absolute;top:50%;right:-80px;transform:translateY(-50%);width:420px;opacity:0.05;pointer-events:none;filter:grayscale(1);}
+@media(max-width:700px){.watermark-m2{width:280px;right:-100px;}}
+
+.demo-row{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;}
+.phone-frame{position:relative;width:220px;border-radius:28px;border:2px solid rgba(0,229,204,0.3);
+  background:#04070b;box-shadow:0 0 32px rgba(0,229,204,0.15), inset 0 0 20px rgba(0,229,204,0.05);
+  overflow:hidden;padding:6px;transition:transform .4s, box-shadow .4s;}
+.phone-frame:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,229,204,0.3), inset 0 0 20px rgba(0,229,204,0.08);}
+.phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:60px;height:16px;border-radius:10px;background:#04070b;border:1px solid rgba(0,229,204,0.2);z-index:2;}
+.phone-frame img{width:100%;display:block;border-radius:22px;}
 
 .stats{display:grid;gap:36px;grid-template-columns:1fr;text-align:center;}
 @media(min-width:700px){.stats{grid-template-columns:repeat(3,1fr);}}
 .stat-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(44px,8vw,64px);color:var(--white);line-height:1;}
 .stat-label{color:var(--gray2);font-size:14px;margin-top:10px;}
+
+.faq-list{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:rgba(15,22,32,0.7);border:1px solid rgba(0,229,204,0.14);border-radius:14px;padding:18px 22px;}
+.faq-item summary{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'+';color:var(--c);font-size:22px;font-weight:400;margin-left:12px;transition:transform .25s;}
+.faq-item[open] summary::after{transform:rotate(45deg);}
+.faq-item p{color:var(--gray2);font-size:14px;line-height:1.6;margin-top:14px;}
 
 .steps{display:grid;gap:28px;grid-template-columns:1fr;counter-reset:step;}
 @media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr);}}
@@ -113,8 +159,8 @@ section{padding:110px 0;}
 .grid{display:grid;gap:20px;grid-template-columns:1fr;}
 @media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr;}}
 @media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr);}}
-.card{background:linear-gradient(160deg,rgba(15,22,32,0.9),rgba(10,15,22,0.9));border:1px solid rgba(0,229,204,0.14);border-radius:18px;padding:30px 26px;transition:border-color .3s, box-shadow .3s, transform .3s;}
-.card:hover{border-color:rgba(0,229,204,0.45);box-shadow:0 12px 32px rgba(0,229,204,0.1);transform:translateY(-4px);}
+.card{background:linear-gradient(160deg,rgba(15,22,32,0.9),rgba(10,15,22,0.9));border:1px solid rgba(0,229,204,0.14);border-radius:18px;padding:30px 26px;transition:border-color .3s, box-shadow .3s, transform .15s ease-out;transform-style:preserve-3d;will-change:transform;}
+.card:hover{border-color:rgba(0,229,204,0.45);box-shadow:0 12px 32px rgba(0,229,204,0.1);}
 .card-icon{width:44px;height:44px;border-radius:12px;background:rgba(0,229,204,0.1);display:flex;align-items:center;justify-content:center;color:var(--c);margin-bottom:18px;}
 .card-icon svg{width:22px;height:22px;}
 .card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;letter-spacing:0.3px;}
@@ -193,16 +239,41 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
     </div>
     <div class="eyebrow">ИИ-АССИСТЕНТ НОВОГО ПОКОЛЕНИЯ</div>
     <h1>MI<span>2</span>TARY</h1>
+    <div class="typing-line"><span class="typing-prefix">&gt;</span> <span id="typing-text"></span><span class="typing-cursor">|</span></div>
     <p>Умный чат на нескольких ИИ-моделях, генерация изображений, анализ документов и фото, мини-игры с собственной экономикой — всё внутри Telegram, без установки приложений.</p>
+    <div class="chip-row">
+      <span class="chip">Текст</span><span class="chip">Изображения</span><span class="chip">Документы</span><span class="chip">Голос</span><span class="chip">Игры</span>
+    </div>
     <div class="hero-ctas">
-      <a class="btn" href="http://t.me/MI2TARY_bot?start=ref_795673072">Открыть в Telegram</a>
+      <a class="btn" href="http://t.me/MI2TARY_bot?start=ref_795673072">Попробовать бесплатно</a>
       <a class="btn btn-ghost" href="#pricing">Смотреть тарифы</a>
     </div>
     <div class="hero-tag">// РАБОТАЕТ ПРЯМО В TELEGRAM — НИЧЕГО УСТАНАВЛИВАТЬ НЕ НУЖНО</div>
   </div>
 </header>
 
-<section id="why">
+<section id="demo">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Живьём</div>
+      <h2>Так это выглядит внутри</h2>
+    </div>
+    <div class="demo-row">
+      <div class="phone-frame" data-reveal>
+        <div class="phone-notch"></div>
+        <img src="shot-leaderboard.png" alt="Лидерборд MI2TARY">
+      </div>
+      <div class="phone-frame" data-reveal>
+        <div class="phone-notch"></div>
+        <img src="shot-style.png" alt="Кастомизация профиля MI2TARY">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="position:relative;overflow:hidden;">
+  <img src="logo-m2.png" alt="" class="watermark-m2">
+
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <div class="eyebrow">Зачем</div>
@@ -218,8 +289,8 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
 <section id="stats">
   <div class="wrap">
     <div class="stats" data-reveal>
-      <div><div class="stat-num">6</div><div class="stat-label">языков интерфейса</div></div>
-      <div><div class="stat-num">4</div><div class="stat-label">мини-игры с M2-экономикой</div></div>
+      <div><div class="stat-num" data-count="6">0</div><div class="stat-label">языков интерфейса</div></div>
+      <div><div class="stat-num" data-count="4">0</div><div class="stat-label">мини-игры с M2-экономикой</div></div>
       <div><div class="stat-num">24/7</div><div class="stat-label">доступность прямо в Telegram</div></div>
     </div>
   </div>
@@ -318,6 +389,33 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
   </div>
 </section>
 
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div class="eyebrow">Вопросы</div>
+      <h2>Прежде чем начать</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" data-reveal>
+        <summary>Это правда бесплатно?</summary>
+        <p>Да — тариф FREE доступен всем без оплаты, с базовыми дневными лимитами и полным доступом к играм. Платные уровни нужны только тем, кому мало лимитов.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary>Нужно ли устанавливать приложение?</summary>
+        <p>Нет. MI2TARY работает прямо внутри Telegram как мини-приложение — открывается за секунду, ничего скачивать не нужно.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary>Как оплатить подписку?</summary>
+        <p>Прямо в самом Telegram — картой, криптовалютой или Telegram Stars. Всё оформляется в разделе «Планы» внутри бота.</p>
+      </details>
+      <details class="faq-item" data-reveal>
+        <summary>Мои данные в безопасности?</summary>
+        <p>Да. Условия обработки данных подробно описаны в политике конфиденциальности — ссылка внизу страницы.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section id="pricing">
   <div class="wrap">
     <div class="sec-head" data-reveal>
@@ -362,7 +460,7 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
     <canvas id="crystal-canvas"></canvas>
     <h2>Хватит переключаться<br>между <span>десятком вкладок</span>.</h2>
     <p>Один чат в Telegram — и всё под рукой. Бесплатно начать можно прямо сейчас.</p>
-    <a class="btn" href="http://t.me/MI2TARY_bot?start=ref_795673072">Открыть MI2TARY</a>
+    <a class="btn" href="http://t.me/MI2TARY_bot?start=ref_795673072">Начать бесплатно за 10 секунд</a>
   </div>
 </section>
 
@@ -402,6 +500,64 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
 function toggleMenu(){
   document.getElementById('mobile-menu').classList.toggle('open');
 }
+// 3D-наклон карточек за курсором — только на десктопе (есть точная мышь)
+if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+  document.querySelectorAll('.card').forEach(card=>{
+    card.addEventListener('mousemove', e=>{
+      const r = card.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - 0.5;
+      const py = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `perspective(700px) rotateX(${py*-7}deg) rotateY(${px*7}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', ()=>{ card.style.transform = ''; });
+  });
+  // Магнитные кнопки — слегка тянутся к курсору
+  document.querySelectorAll('.btn').forEach(btn=>{
+    btn.addEventListener('mousemove', e=>{
+      const r = btn.getBoundingClientRect();
+      const mx = (e.clientX - r.left - r.width/2) * 0.25;
+      const my = (e.clientY - r.top - r.height/2) * 0.35;
+      btn.style.transform = `translate(${mx}px, ${my}px)`;
+    });
+    btn.addEventListener('mouseleave', ()=>{ btn.style.transform = ''; });
+  });
+}
+// Счётчик цифр статистики — набегают от 0 при попадании в экран
+document.querySelectorAll('.stat-num[data-count]').forEach(el=>{
+  const target = parseInt(el.dataset.count, 10);
+  const statObs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      let cur = 0;
+      const step = ()=>{ cur++; el.textContent = cur; if(cur < target) requestAnimationFrame(step); else el.textContent = target; };
+      step();
+      statObs.unobserve(el);
+    });
+  }, {threshold:0.5});
+  statObs.observe(el);
+});
+// Печатающаяся строка примеров запросов в hero
+(function(){
+  const el = document.getElementById('typing-text');
+  if(!el) return;
+  const phrases = [
+    'нарисуй логотип для кофейни...',
+    'переведи этот PDF на английский...',
+    'что нового про ИИ на этой неделе...',
+    'озвучь этот текст голосом...',
+    'помоги составить план на день...'
+  ];
+  let pi=0, ci=0, deleting=false;
+  function tick(){
+    const full = phrases[pi];
+    el.textContent = deleting ? full.slice(0, ci--) : full.slice(0, ci++);
+    let delay = deleting ? 28 : 55;
+    if(!deleting && ci > full.length){ deleting = true; delay = 1400; }
+    else if(deleting && ci < 0){ deleting = false; pi = (pi+1) % phrases.length; ci = 0; delay = 400; }
+    setTimeout(tick, delay);
+  }
+  tick();
+})();
 // Lenis — плавная инерционная прокрутка (если CDN недоступен — сайт работает и без неё)
 let lenis = null;
 if(typeof Lenis !== 'undefined'){
