@@ -47,13 +47,14 @@ a{color:inherit;text-decoration:none;}
 .blob1{width:520px;height:520px;top:-160px;left:-120px;}
 .blob2{width:420px;height:420px;top:40%;right:-140px;}
 .blob3{width:380px;height:380px;bottom:-140px;left:20%;}
-.grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,204,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,204,0.05) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);}
+.grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,204,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,204,0.05) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);animation:grid-breathe 8s ease-in-out infinite;}
+@keyframes grid-breathe{0%,100%{opacity:0.7;}50%{opacity:1;}}
 
 /* nav */
 nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(4,7,11,0.72);border-bottom:1px solid rgba(0,229,204,0.14);}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;}
 .logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:21px;letter-spacing:2px;color:transparent;-webkit-text-stroke:0.6px rgba(180,235,230,0.7);}
-.logo span{color:transparent;-webkit-text-stroke:0.6px var(--c);text-shadow:0 0 4px rgba(0,229,204,0.5);}
+.logo span{color:transparent;-webkit-text-stroke:0.6px var(--c);text-shadow:0 0 2px rgba(0,229,204,0.3);}
 .nav-logo-img{height:26px;width:auto;display:block;filter:drop-shadow(0 0 4px rgba(0,229,204,0.4));}
 .nav-links{display:none;gap:28px;font-size:14px;color:var(--gray2);}
 .nav-links a:hover{color:var(--c);}
@@ -122,7 +123,7 @@ section{padding:110px 0;}
 
 .demo-row{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;}
 .phone-frame{position:relative;width:220px;border-radius:28px;border:2px solid rgba(0,229,204,0.3);
-  background:#04070b;box-shadow:0 0 32px rgba(0,229,204,0.15), inset 0 0 20px rgba(0,229,204,0.05);
+  background:#04070b;box-shadow:0 20px 60px rgba(0,0,0,0.5), 0 0 1px rgba(0,229,204,0.4), inset 0 0 16px rgba(0,229,204,0.04);
   overflow:hidden;padding:6px;transition:transform .4s, box-shadow .4s;}
 .phone-frame:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(0,229,204,0.3), inset 0 0 20px rgba(0,229,204,0.08);}
 .phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:60px;height:16px;border-radius:10px;background:#04070b;border:1px solid rgba(0,229,204,0.2);z-index:2;}
@@ -159,8 +160,12 @@ section{padding:110px 0;}
 .grid{display:grid;gap:20px;grid-template-columns:1fr;}
 @media(min-width:640px){.grid-2{grid-template-columns:1fr 1fr;}}
 @media(min-width:900px){.grid-3{grid-template-columns:repeat(3,1fr);}}
-.card{background:linear-gradient(160deg,rgba(15,22,32,0.9),rgba(10,15,22,0.9));border:1px solid rgba(0,229,204,0.14);border-radius:18px;padding:30px 26px;transition:border-color .3s, box-shadow .3s, transform .15s ease-out;transform-style:preserve-3d;will-change:transform;}
-.card:hover{border-color:rgba(0,229,204,0.45);box-shadow:0 12px 32px rgba(0,229,204,0.1);}
+.card{background:linear-gradient(160deg,rgba(18,26,36,0.85),rgba(9,14,20,0.92));backdrop-filter:blur(6px);
+  border:1px solid rgba(0,229,204,0.12);border-top-color:rgba(180,240,235,0.22);
+  border-radius:18px;padding:30px 26px;position:relative;
+  box-shadow:0 20px 40px -20px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.03) inset;
+  transition:border-color .3s, box-shadow .3s, transform .15s ease-out;transform-style:preserve-3d;will-change:transform;}
+.card:hover{border-color:rgba(0,229,204,0.4);box-shadow:0 24px 48px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(0,229,204,0.15), 0 1px 0 rgba(255,255,255,0.05) inset;}
 .card-icon{width:44px;height:44px;border-radius:12px;background:rgba(0,229,204,0.1);display:flex;align-items:center;justify-content:center;color:var(--c);margin-bottom:18px;}
 .card-icon svg{width:22px;height:22px;}
 .card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;letter-spacing:0.3px;}
@@ -172,17 +177,25 @@ section{padding:110px 0;}
 
 /* pricing */
 .price-card{position:relative;}
-.price-card.hi{border-color:rgba(0,229,204,0.5);box-shadow:0 0 26px rgba(0,229,204,0.18);}
+.price-card.hi{border-color:rgba(0,229,204,0.4);}
 .price-tag{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:26px;letter-spacing:1px;margin:4px 0 16px;}
 .tier-free{color:var(--gray2);}
 .tier-super{color:var(--c);text-shadow:0 0 12px rgba(0,229,204,0.5);}
 .tier-ultimate{color:#ffd600;text-shadow:0 0 12px rgba(255,214,0,0.4);}
+
+.rarity-corner{position:absolute;top:0;right:0;width:0;height:0;border-style:solid;border-radius:0 18px 0 0;}
+.rarity-common .rarity-corner{border-width:0 26px 26px 0;border-color:transparent rgba(120,140,145,0.25) transparent transparent;}
+.rarity-rare .rarity-corner{border-width:0 30px 30px 0;border-color:transparent rgba(0,229,204,0.45) transparent transparent;}
+.rarity-legendary .rarity-corner{border-width:0 34px 34px 0;border-color:transparent rgba(255,214,0,0.5) transparent transparent;}
+.rarity-legendary{border-image:linear-gradient(160deg, rgba(255,214,0,0.35), rgba(0,229,204,0.12)) 1;}
+@keyframes rarity-shimmer{0%,100%{border-top-color:rgba(180,240,235,0.22);}50%{border-top-color:rgba(0,229,204,0.55);}}
+.rarity-rare{animation:rarity-shimmer 3s ease-in-out infinite;}
 .price-list{list-style:none;margin:14px 0 20px;font-size:13px;color:#a9c0c4;display:flex;flex-direction:column;gap:7px;}
 .price-list li::before{content:'—';color:var(--c);margin-right:7px;}
 
 /* social */
 .social-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.social-btn{display:flex;align-items:center;gap:11px;padding:16px 26px;border-radius:14px;border:1.5px solid rgba(0,229,204,0.4);background:rgba(15,22,32,0.75);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;box-shadow:0 0 16px rgba(0,229,204,0.15);transition:box-shadow .2s, transform .2s;}
+.social-btn{display:flex;align-items:center;gap:11px;padding:16px 26px;border-radius:14px;border:1.5px solid rgba(0,229,204,0.25);background:rgba(15,22,32,0.75);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;transition:box-shadow .25s, transform .25s, border-color .25s;}
 .social-btn:hover{border-color:var(--c);box-shadow:0 0 24px rgba(0,229,204,0.35);transform:translateY(-2px);}
 .social-btn svg{width:22px;height:22px;color:var(--c);}
 
@@ -423,15 +436,18 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
       <h2>Выбери свой уровень</h2>
     </div>
     <div class="grid grid-3">
-      <div class="card price-card" data-reveal>
+      <div class="card price-card rarity-common" data-reveal>
+        <div class="rarity-corner"></div>
         <div class="price-tag tier-free">FREE</div>
         <ul class="price-list"><li>Базовые дневные лимиты</li><li>Доступ ко всем играм</li></ul>
       </div>
-      <div class="card price-card hi" data-reveal>
+      <div class="card price-card hi rarity-rare" data-reveal>
+        <div class="rarity-corner"></div>
         <div class="price-tag tier-super">SUPER</div>
         <ul class="price-list"><li>Расширенные лимиты запросов и изображений</li><li>Глубокое исследование, создание файлов</li></ul>
       </div>
-      <div class="card price-card" data-reveal>
+      <div class="card price-card rarity-legendary" data-reveal>
+        <div class="rarity-corner"></div>
         <div class="price-tag tier-ultimate">ULTIMATE</div>
         <ul class="price-list"><li>Максимальные лимиты</li><li>Приоритетная очередь обработки</li></ul>
       </div>
