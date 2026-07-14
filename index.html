@@ -20,7 +20,7 @@
 <meta name="twitter:description" content="Умный чат на нескольких ИИ-моделях, генерация изображений, анализ документов и мини-игры — всё внутри Telegram.">
 <meta name="twitter:image" content="https://mi2tary.is-a.dev/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 <script src="https://unpkg.com/@tonconnect/ui@2/dist/tonconnect-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -54,7 +54,7 @@ a{color:inherit;text-decoration:none;}
 /* nav */
 nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(4,7,11,0.72);border-bottom:1px solid rgba(0,229,204,0.14);}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;}
-.logo{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:21px;letter-spacing:2px;color:transparent;-webkit-text-stroke:0.6px rgba(180,235,230,0.7);}
+.logo{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:21px;letter-spacing:2px;color:transparent;-webkit-text-stroke:0.6px rgba(180,235,230,0.7);}
 .logo span{color:transparent;-webkit-text-stroke:0.6px var(--c);text-shadow:0 0 2px rgba(0,229,204,0.3);}
 .nav-logo-img{height:26px;width:auto;display:block;filter:drop-shadow(0 0 4px rgba(0,229,204,0.4));}
 .nav-links{display:none;gap:20px;font-size:14px;color:var(--gray2);flex-wrap:wrap;row-gap:8px;}
@@ -68,9 +68,9 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
 .mobile-menu{position:fixed;top:64px;left:0;right:0;bottom:0;z-index:49;background:rgba(4,7,11,0.98);backdrop-filter:blur(10px);
   display:flex;flex-direction:column;gap:6px;padding:24px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:opacity .25s, transform .25s;overflow-y:auto;}
 .mobile-menu.open{opacity:1;transform:none;pointer-events:auto;}
-.mobile-menu a{padding:16px 4px;border-bottom:1px solid rgba(0,229,204,0.1);font-family:'Rajdhani',sans-serif;font-weight:600;font-size:17px;}
+.mobile-menu a{padding:16px 4px;border-bottom:1px solid rgba(0,229,204,0.1);font-family:'Rajdhani','Exo 2',sans-serif;font-weight:600;font-size:17px;}
 @media(min-width:760px){.mobile-menu{display:none;}}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Rajdhani',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.5px;
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:15px;letter-spacing:0.5px;
   padding:11px 22px;border-radius:11px;border:1px solid var(--c);color:var(--bg);background:var(--c);box-shadow:0 0 18px rgba(0,229,204,0.35);white-space:nowrap;transition:transform .15s ease-out;}
 .btn:active{transform:scale(0.97);}
 .btn-ghost{background:transparent;color:var(--c);box-shadow:none;}
@@ -105,7 +105,7 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
 .mobile-lang-block{margin:0;}
 .mobile-lang-toggle{width:100%;display:flex;align-items:center;justify-content:space-between;background:transparent;
   border:none;border-bottom:1px solid rgba(0,229,204,0.1);border-radius:0;padding:16px 4px;cursor:pointer;}
-.mobile-lang-toggle-label{font-family:'Rajdhani',sans-serif;font-weight:600;font-size:17px;color:var(--white);}
+.mobile-lang-toggle-label{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:600;font-size:17px;color:var(--white);}
 .mobile-lang-current{display:flex;align-items:center;gap:6px;color:var(--c);font-family:'Share Tech Mono',monospace;font-size:13px;}
 .mobile-lang-current::after{content:'';width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid var(--c);transition:transform .2s;}
 .mobile-lang-block.open .mobile-lang-current::after{transform:rotate(180deg);}
@@ -120,21 +120,22 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
 .mobile-social-row{display:flex;gap:10px;padding:0 4px 14px;}
 .mobile-social-row a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(0,229,204,0.25);background:rgba(0,229,204,0.05);
   display:flex;align-items:center;justify-content:center;color:var(--c);}
+.mobile-social-row a svg{width:19px;height:19px;}
 /* прогресс: ранги и достижения */
 .rank-ladder{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:30px;}
-.rank-badge{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.5px;color:var(--white);
+.rank-badge{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.5px;color:var(--white);
   border:1px solid rgba(0,229,204,0.25);border-radius:20px;padding:8px 16px;
   background:linear-gradient(160deg,rgba(18,26,36,0.85),rgba(9,14,20,0.92));}
 .ach-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
 
 /* экономика M2 */
 .referral-box{margin-top:28px;text-align:center;}
-.referral-box h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;}
+.referral-box h3{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;}
 .referral-box p{font-size:14px;color:var(--gray2);line-height:1.6;margin-bottom:18px;max-width:480px;margin-left:auto;margin-right:auto;}
 
 /* hero */
 .hero{padding:120px 0 100px;text-align:center;position:relative;}
-.hero h1{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(46px,12vw,92px);letter-spacing:5px;line-height:0.98;margin:26px 0 24px;
+.hero h1{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:clamp(46px,12vw,92px);letter-spacing:5px;line-height:0.98;margin:26px 0 24px;
   color:transparent;-webkit-text-stroke:1px rgba(180,235,230,0.75);
   text-shadow:0 0 3px rgba(160,230,225,0.5),0 0 10px rgba(0,229,204,0.35);}
 .hero h1 span{color:transparent;-webkit-text-stroke:1px var(--c);text-shadow:0 0 4px rgba(0,229,204,0.7),0 0 14px rgba(0,229,204,0.5);animation:logo-flicker 4s infinite;}
@@ -173,7 +174,7 @@ nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(
 /* sections */
 section{padding:110px 0;}
 .sec-head{text-align:center;max-width:560px;margin:0 auto 56px;}
-.sec-head h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(30px,5vw,42px);letter-spacing:0.5px;margin-top:12px;line-height:1.15;}
+.sec-head h2{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:clamp(30px,5vw,42px);letter-spacing:0.5px;margin-top:12px;line-height:1.15;}
 .why-text{max-width:640px;margin:0 auto;}
 .why-text p{font-size:16.5px;line-height:1.8;margin-bottom:18px;color:#c7d0d6;}
 .watermark-m2{position:absolute;top:50%;right:-80px;transform:translateY(-50%);width:420px;opacity:0.05;pointer-events:none;filter:grayscale(1);}
@@ -189,12 +190,12 @@ section{padding:110px 0;}
 
 .stats{display:grid;gap:36px;grid-template-columns:1fr;text-align:center;}
 @media(min-width:700px){.stats{grid-template-columns:repeat(3,1fr);}}
-.stat-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(40px,7vw,58px);color:var(--white);line-height:1;}
+.stat-num{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:clamp(40px,7vw,58px);color:var(--white);line-height:1;}
 .stat-label{color:var(--gray2);font-size:14px;margin-top:10px;}
 
 .faq-list{max-width:640px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
 .faq-item{background:rgba(15,22,32,0.7);border:1px solid rgba(0,229,204,0.14);border-radius:14px;padding:18px 22px;}
-.faq-item summary{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+.faq-item summary{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:16.5px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
 .faq-item summary::-webkit-details-marker{display:none;}
 .faq-item summary::after{content:'+';color:var(--c);font-size:22px;font-weight:400;margin-left:12px;transition:transform .25s;}
 .faq-item[open] summary::after{transform:rotate(45deg);}
@@ -203,13 +204,13 @@ section{padding:110px 0;}
 .steps{display:grid;gap:28px;grid-template-columns:1fr;counter-reset:step;}
 @media(min-width:800px){.steps{grid-template-columns:repeat(3,1fr);}}
 .step{position:relative;padding-top:8px;}
-.step-num{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:52px;color:transparent;-webkit-text-stroke:1.5px rgba(0,229,204,0.5);line-height:1;margin-bottom:16px;}
-.step h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;}
+.step-num{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:52px;color:transparent;-webkit-text-stroke:1.5px rgba(0,229,204,0.5);line-height:1;margin-bottom:16px;}
+.step h3{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;}
 .step p{font-size:14px;color:var(--gray2);line-height:1.6;}
 .step:not(:last-child)::after{content:'';position:absolute;top:26px;left:calc(100% + 14px);width:calc(100% - 28px);height:1px;background:linear-gradient(90deg,rgba(0,229,204,0.3),transparent);display:none;}
 @media(min-width:800px){.step:not(:last-child)::after{display:block;}}
 .cta-final{text-align:center;padding:70px 0;}
-.cta-final h2{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:clamp(28px,6vw,42px);margin-bottom:14px;}
+.cta-final h2{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:clamp(28px,6vw,42px);margin-bottom:14px;}
 .cta-final h2 span{color:var(--c);text-shadow:0 0 16px rgba(0,229,204,0.6);}
 .cta-final p{color:var(--gray2);font-size:15px;margin-bottom:30px;}
 #crystal-canvas{width:180px;height:180px;margin:0 auto 8px;display:block;}
@@ -226,7 +227,7 @@ section{padding:110px 0;}
 .card:hover{border-color:rgba(0,229,204,0.4);box-shadow:0 24px 48px -16px rgba(0,0,0,0.7), 0 0 0 1px rgba(0,229,204,0.15), 0 1px 0 rgba(255,255,255,0.05) inset;}
 .card-icon{width:44px;height:44px;border-radius:12px;background:rgba(0,229,204,0.1);display:flex;align-items:center;justify-content:center;color:var(--c);margin-bottom:18px;}
 .card-icon svg{width:22px;height:22px;}
-.card h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;letter-spacing:0.3px;}
+.card h3{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:19px;margin-bottom:8px;letter-spacing:0.3px;}
 .card p{font-size:14px;color:var(--gray2);line-height:1.6;}
 
 /* games strip */
@@ -255,7 +256,7 @@ section{padding:110px 0;}
   border:1px solid rgba(0,229,204,0.3);border-radius:20px;padding:30px 28px;box-shadow:0 30px 80px rgba(0,0,0,0.6);}
 .news-modal-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;border:1px solid rgba(0,229,204,0.3);background:rgba(0,229,204,0.06);color:var(--c);cursor:pointer;font-size:18px;line-height:1;}
 [dir="rtl"] .news-modal-close{right:auto;left:16px;}
-.news-modal-panel h3{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:24px;margin:6px 0 12px;padding-right:30px;}
+.news-modal-panel h3{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:24px;margin:6px 0 12px;padding-right:30px;}
 [dir="rtl"] .news-modal-panel h3{padding-right:0;padding-left:30px;}
 .news-modal-panel .news-date{margin-bottom:16px;}
 .news-modal-body{font-size:15px;line-height:1.75;color:#c7d0d6;}
@@ -263,7 +264,7 @@ section{padding:110px 0;}
 /* pricing */
 .price-card{position:relative;}
 .price-card.hi{border-color:rgba(0,229,204,0.4);}
-.price-tag{font-family:'Rajdhani',sans-serif;font-weight:700;font-size:26px;letter-spacing:1px;margin:4px 0 16px;}
+.price-tag{font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:26px;letter-spacing:1px;margin:4px 0 16px;}
 .tier-free{color:var(--gray2);}
 .tier-super{color:var(--c);text-shadow:0 0 12px rgba(0,229,204,0.5);}
 .tier-ultimate{color:#ffd600;text-shadow:0 0 12px rgba(255,214,0,0.4);}
@@ -280,7 +281,7 @@ section{padding:110px 0;}
 
 /* social */
 .social-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.social-btn{display:flex;align-items:center;gap:11px;padding:16px 26px;border-radius:14px;border:1.5px solid rgba(0,229,204,0.25);background:rgba(15,22,32,0.75);font-family:'Rajdhani',sans-serif;font-weight:700;font-size:16px;transition:box-shadow .25s, transform .25s, border-color .25s;}
+.social-btn{display:flex;align-items:center;gap:11px;padding:16px 26px;border-radius:14px;border:1.5px solid rgba(0,229,204,0.25);background:rgba(15,22,32,0.75);font-family:'Rajdhani','Exo 2',sans-serif;font-weight:700;font-size:16px;transition:box-shadow .25s, transform .25s, border-color .25s;}
 .social-btn:hover{border-color:var(--c);box-shadow:0 0 24px rgba(0,229,204,0.35);transform:translateY(-2px);}
 .social-btn svg{width:22px;height:22px;color:var(--c);}
 
@@ -527,13 +528,11 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
     <div class="sec-head" data-reveal>
       <div class="eyebrow" data-i18n="progress_eyebrow">Прогресс</div>
       <h2 data-i18n="progress_h2">Ранги и достижения</h2>
-      <p style="margin-top:14px;font-size:15px;color:var(--gray2);line-height:1.6;" data-i18n="progress_p">16 уникальных рангов — от новичка до легенды. Каждый шаг открывает новый статус в лидерборде и бонусы, а достижения отмечают активность в чате, играх и рефералах.</p>
+      <p style="margin-top:14px;font-size:15px;color:var(--gray2);line-height:1.6;" data-i18n="progress_p">От Bronze до Elite — чем выше ранг, тем больше бонус к M2. Достижения отмечают активность в чате, играх и рефералах.</p>
     </div>
     <div class="rank-ladder" data-reveal>
-      <span class="rank-badge">Альфа</span><span class="rank-badge">Браво</span><span class="rank-badge">Дельта</span><span class="rank-badge">Эхо</span>
-      <span class="rank-badge">Зулу</span><span class="rank-badge">Танго</span><span class="rank-badge">Сьерра</span><span class="rank-badge">Гольф</span>
-      <span class="rank-badge">Вектор</span><span class="rank-badge">Феникс</span><span class="rank-badge">Титан</span><span class="rank-badge">Омега</span>
-      <span class="rank-badge">Пульс</span><span class="rank-badge">Нексус</span><span class="rank-badge">Апекс</span><span class="rank-badge">Кристалл</span>
+      <span class="rank-badge">Bronze</span><span class="rank-badge">Silver</span><span class="rank-badge">Gold</span>
+      <span class="rank-badge">Platinum</span><span class="rank-badge">Master</span><span class="rank-badge">Elite</span>
     </div>
     <div class="ach-row" data-reveal>
       <span class="chip" data-i18n="ach_tag1">Активность</span>
@@ -593,6 +592,7 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
           <li data-i18n="spend2">Дополнительные спины Колеса Фортуны</li>
           <li data-i18n="spend3">Рамки, фоны и акцентный цвет профиля</li>
         </ul>
+        <a class="btn btn-ghost" style="margin-top:16px;" href="http://t.me/MI2TARY_bot?start=ref_795673072" data-i18n="buy_m2_btn">Купить M2</a>
       </div>
     </div>
     <div class="referral-box" data-reveal>
@@ -646,11 +646,13 @@ footer{border-top:1px solid rgba(0,229,204,0.12);padding:64px 0 36px;text-align:
         <div class="rarity-corner"></div>
         <div class="price-tag tier-super">SUPER</div>
         <ul class="price-list"><li data-i18n="tier_super_li1">Расширенные лимиты запросов и изображений</li><li data-i18n="tier_super_li2">Глубокое исследование, создание файлов</li></ul>
+        <a class="btn" style="display:flex;justify-content:center;margin-top:6px;" href="http://t.me/MI2TARY_bot?start=ref_795673072" data-i18n="tier_super_btn">Оформить Super</a>
       </div>
       <div class="card price-card rarity-legendary" data-reveal>
         <div class="rarity-corner"></div>
         <div class="price-tag tier-ultimate">ULTIMATE</div>
         <ul class="price-list"><li data-i18n="tier_ultimate_li1">Максимальные лимиты</li><li data-i18n="tier_ultimate_li2">Приоритетная очередь обработки</li></ul>
+        <a class="btn btn-ghost" style="display:flex;justify-content:center;margin-top:6px;border:1px solid var(--c);" href="http://t.me/MI2TARY_bot?start=ref_795673072" data-i18n="tier_ultimate_btn">Оформить Ultimate</a>
       </div>
     </div>
     <a class="btn" style="display:flex;max-width:340px;margin:28px auto 0;justify-content:center;" href="http://t.me/MI2TARY_bot?start=ref_795673072" data-i18n="btn_pricing_cta">Выбрать тариф в Telegram</a>
@@ -766,13 +768,14 @@ footer_col_product:"Продукт",footer_col_social:"Мы на связи",foo
 foot_oferta:"Публичная оферта",foot_terms:"Пользовательское соглашение",foot_privacy:"Конфиденциальность",
 nav_progress:"Прогресс",nav_economy:"Экономика",
 progress_eyebrow:"Прогресс",progress_h2:"Ранги и достижения",
-progress_p:"16 уникальных рангов — от новичка до легенды. Каждый шаг открывает новый статус в лидерборде и бонусы, а достижения отмечают активность в чате, играх и рефералах.",
+progress_p:"От Bronze до Elite — чем выше ранг, тем больше бонус к M2. Достижения отмечают активность в чате, играх и рефералах.",
 ach_tag1:"Активность",ach_tag2:"Игры",ach_tag3:"Рефералы",ach_tag4:"Серии дней",ach_tag5:"Коллекции",
 economy_eyebrow:"Экономика",economy_h2:"Как работает M2",
 earn_title:"Зарабатывай",earn1:"Ежедневные квесты и мини-игры",earn2:"Достижения и серии дней",earn3:"Приглашай друзей по своей ссылке",
 spend_title:"Трать",spend1:"Продлевай подписку Super/Ultimate",spend2:"Дополнительные спины Колеса Фортуны",spend3:"Рамки, фоны и акцентный цвет профиля",
 referral_title:"Реферальная программа",referral_p:"Каждый друг, который присоединится по твоей ссылке, приносит тебе бонус M2 — точные условия смотри в разделе «Рефералы» внутри бота.",referral_btn:"Пригласить друга",
 account_tg_title:"Войти через Telegram",account_ton_title:"TON-кошелёк",account_tg_hello:"Привет,",
+buy_m2_btn:"Купить M2",tier_super_btn:"Оформить Super",tier_ultimate_btn:"Оформить Ultimate",
 lang_title:"Язык интерфейса",
 meta_title:"MI2TARY — ИИ-ассистент в Telegram",meta_desc:"MI2TARY — ИИ-ассистент нового поколения в Telegram: умный чат, генерация изображений, мини-игры и система баллов M2.",
 typing_phrases:["нарисуй логотип для кофейни...","переведи этот PDF на английский...","что нового про ИИ на этой неделе...","озвучь этот текст голосом...","помоги составить план на день..."]
@@ -823,13 +826,14 @@ footer_col_product:"Product",footer_col_social:"Stay in touch",footer_col_docs:"
 foot_oferta:"Public offer",foot_terms:"Terms of use",foot_privacy:"Privacy policy",
 nav_progress:"Progress",nav_economy:"Economy",
 progress_eyebrow:"Progress",progress_h2:"Ranks & achievements",
-progress_p:"16 unique ranks — from rookie to legend. Every step unlocks a new leaderboard status and perks, while achievements track your activity in chat, games and referrals.",
+progress_p:"From Bronze to Elite — the higher the rank, the bigger your M2 bonus. Achievements track your activity in chat, games and referrals.",
 ach_tag1:"Activity",ach_tag2:"Games",ach_tag3:"Referrals",ach_tag4:"Streaks",ach_tag5:"Collections",
 economy_eyebrow:"Economy",economy_h2:"How M2 works",
 earn_title:"Earn",earn1:"Daily quests and mini-games",earn2:"Achievements and daily streaks",earn3:"Invite friends with your link",
 spend_title:"Spend",spend1:"Extend your Super/Ultimate subscription",spend2:"Extra Fortune Wheel spins",spend3:"Profile frames, backgrounds and accent color",
 referral_title:"Referral program",referral_p:"Every friend who joins through your link earns you an M2 bonus — see the exact terms in the \"Referrals\" section inside the bot.",referral_btn:"Invite a friend",
 account_tg_title:"Sign in with Telegram",account_ton_title:"TON wallet",account_tg_hello:"Hi,",
+buy_m2_btn:"Buy M2",tier_super_btn:"Get Super",tier_ultimate_btn:"Get Ultimate",
 lang_title:"Interface language",
 meta_title:"MI2TARY — AI assistant in Telegram",meta_desc:"MI2TARY — a next-gen AI assistant in Telegram: smart chat, image generation, mini-games and the M2 points system.",
 typing_phrases:["draw a logo for a coffee shop...","translate this PDF to Spanish...","what's new in AI this week...","read this text out loud...","help me plan my day..."]
@@ -880,13 +884,14 @@ footer_col_product:"Produkt",footer_col_social:"Bleib in Kontakt",footer_col_doc
 foot_oferta:"Öffentliches Angebot",foot_terms:"Nutzungsbedingungen",foot_privacy:"Datenschutz",
 nav_progress:"Fortschritt",nav_economy:"Wirtschaft",
 progress_eyebrow:"Fortschritt",progress_h2:"Ränge & Erfolge",
-progress_p:"16 einzigartige Ränge — vom Neuling bis zur Legende. Jede Stufe schaltet einen neuen Rangliste-Status und Boni frei, während Erfolge deine Aktivität im Chat, in Spielen und bei Empfehlungen festhalten.",
+progress_p:"Von Bronze bis Elite — je höher der Rang, desto größer dein M2-Bonus. Erfolge dokumentieren deine Aktivität im Chat, in Spielen und bei Empfehlungen.",
 ach_tag1:"Aktivität",ach_tag2:"Spiele",ach_tag3:"Empfehlungen",ach_tag4:"Serien",ach_tag5:"Sammlungen",
 economy_eyebrow:"Wirtschaft",economy_h2:"So funktioniert M2",
 earn_title:"Verdienen",earn1:"Tägliche Quests und Minispiele",earn2:"Erfolge und tägliche Serien",earn3:"Freunde über deinen Link einladen",
 spend_title:"Ausgeben",spend1:"Super-/Ultimate-Abo verlängern",spend2:"Zusätzliche Glücksrad-Drehungen",spend3:"Profilrahmen, Hintergründe und Akzentfarbe",
 referral_title:"Empfehlungsprogramm",referral_p:"Jeder Freund, der über deinen Link beitritt, bringt dir einen M2-Bonus — die genauen Bedingungen findest du im Bereich „Empfehlungen“ im Bot.",referral_btn:"Freund einladen",
 account_tg_title:"Mit Telegram anmelden",account_ton_title:"TON-Wallet",account_tg_hello:"Hallo,",
+buy_m2_btn:"M2 kaufen",tier_super_btn:"Super holen",tier_ultimate_btn:"Ultimate holen",
 lang_title:"Oberflächensprache",
 meta_title:"MI2TARY — KI-Assistent in Telegram",meta_desc:"MI2TARY — ein KI-Assistent der nächsten Generation in Telegram: smarter Chat, Bildgenerierung, Minispiele und das M2-Punktesystem.",
 typing_phrases:["zeichne ein Logo für ein Café...","übersetze dieses PDF ins Englische...","was gibt es Neues zu KI diese Woche...","lies mir diesen Text vor...","hilf mir, meinen Tag zu planen..."]
@@ -937,13 +942,14 @@ footer_col_product:"Producto",footer_col_social:"Síguenos",footer_col_docs:"Doc
 foot_oferta:"Oferta pública",foot_terms:"Términos de uso",foot_privacy:"Privacidad",
 nav_progress:"Progreso",nav_economy:"Economía",
 progress_eyebrow:"Progreso",progress_h2:"Rangos y logros",
-progress_p:"16 rangos únicos — de novato a leyenda. Cada paso desbloquea un nuevo estatus en la clasificación y bonificaciones, mientras que los logros registran tu actividad en el chat, los juegos y las referencias.",
+progress_p:"De Bronze a Elite — cuanto más alto el rango, mayor tu bonificación de M2. Los logros registran tu actividad en el chat, los juegos y las referencias.",
 ach_tag1:"Actividad",ach_tag2:"Juegos",ach_tag3:"Referidos",ach_tag4:"Rachas",ach_tag5:"Colecciones",
 economy_eyebrow:"Economía",economy_h2:"Cómo funciona M2",
 earn_title:"Gana",earn1:"Misiones diarias y minijuegos",earn2:"Logros y rachas diarias",earn3:"Invita amigos con tu enlace",
 spend_title:"Gasta",spend1:"Extiende tu suscripción Super/Ultimate",spend2:"Giros extra de la Rueda de la Fortuna",spend3:"Marcos, fondos y color de acento del perfil",
 referral_title:"Programa de referidos",referral_p:"Cada amigo que se una con tu enlace te da una bonificación de M2 — consulta las condiciones exactas en la sección «Referidos» dentro del bot.",referral_btn:"Invitar a un amigo",
 account_tg_title:"Iniciar sesión con Telegram",account_ton_title:"Billetera TON",account_tg_hello:"Hola,",
+buy_m2_btn:"Comprar M2",tier_super_btn:"Obtener Super",tier_ultimate_btn:"Obtener Ultimate",
 lang_title:"Idioma de la interfaz",
 meta_title:"MI2TARY — Asistente de IA en Telegram",meta_desc:"MI2TARY — un asistente de IA de nueva generación en Telegram: chat inteligente, generación de imágenes, minijuegos y el sistema de puntos M2.",
 typing_phrases:["dibuja un logo para una cafetería...","traduce este PDF al inglés...","qué hay de nuevo en IA esta semana...","lee este texto en voz alta...","ayúdame a planear mi día..."]
@@ -994,13 +1000,14 @@ footer_col_product:"Produit",footer_col_social:"Restons en contact",footer_col_d
 foot_oferta:"Offre publique",foot_terms:"Conditions d'utilisation",foot_privacy:"Confidentialité",
 nav_progress:"Progression",nav_economy:"Économie",
 progress_eyebrow:"Progression",progress_h2:"Rangs et succès",
-progress_p:"16 rangs uniques — du débutant à la légende. Chaque étape débloque un nouveau statut dans le classement et des bonus, tandis que les succès suivent ton activité dans le chat, les jeux et les parrainages.",
+progress_p:"De Bronze à Elite — plus le rang est élevé, plus ton bonus M2 est important. Les succès suivent ton activité dans le chat, les jeux et les parrainages.",
 ach_tag1:"Activité",ach_tag2:"Jeux",ach_tag3:"Parrainages",ach_tag4:"Séries",ach_tag5:"Collections",
 economy_eyebrow:"Économie",economy_h2:"Comment fonctionne M2",
 earn_title:"Gagner",earn1:"Quêtes quotidiennes et mini-jeux",earn2:"Succès et séries quotidiennes",earn3:"Invite des amis avec ton lien",
 spend_title:"Dépenser",spend1:"Prolonger ton abonnement Super/Ultimate",spend2:"Tours supplémentaires à la Roue de la Fortune",spend3:"Cadres, fonds et couleur d'accent du profil",
 referral_title:"Programme de parrainage",referral_p:"Chaque ami qui rejoint via ton lien te rapporte un bonus M2 — consulte les conditions exactes dans la section « Parrainages » du bot.",referral_btn:"Inviter un ami",
 account_tg_title:"Se connecter avec Telegram",account_ton_title:"Portefeuille TON",account_tg_hello:"Salut,",
+buy_m2_btn:"Acheter M2",tier_super_btn:"Obtenir Super",tier_ultimate_btn:"Obtenir Ultimate",
 lang_title:"Langue de l'interface",
 meta_title:"MI2TARY — Assistant IA dans Telegram",meta_desc:"MI2TARY — un assistant IA nouvelle génération dans Telegram : chat intelligent, génération d'images, mini-jeux et le système de points M2.",
 typing_phrases:["dessine un logo pour un café...","traduis ce PDF en anglais...","quoi de neuf en IA cette semaine...","lis ce texte à voix haute...","aide-moi à planifier ma journée..."]
@@ -1051,13 +1058,14 @@ footer_col_product:"المنتج",footer_col_social:"ابقَ على تواصل"
 foot_oferta:"العرض العام",foot_terms:"شروط الاستخدام",foot_privacy:"الخصوصية",
 nav_progress:"التقدم",nav_economy:"الاقتصاد",
 progress_eyebrow:"التقدم",progress_h2:"المستويات والإنجازات",
-progress_p:"16 مستوى فريد — من المبتدئ إلى الأسطورة. كل خطوة تفتح مكانة جديدة في لوحة الصدارة ومكافآت، بينما تتتبع الإنجازات نشاطك في المحادثة والألعاب والإحالات.",
+progress_p:"من Bronze إلى Elite — كلما ارتفع مستواك زادت مكافأة M2. تتتبع الإنجازات نشاطك في المحادثة والألعاب والإحالات.",
 ach_tag1:"النشاط",ach_tag2:"الألعاب",ach_tag3:"الإحالات",ach_tag4:"السلاسل",ach_tag5:"المجموعات",
 economy_eyebrow:"الاقتصاد",economy_h2:"كيف يعمل M2",
 earn_title:"اربح",earn1:"مهام يومية وألعاب مصغّرة",earn2:"الإنجازات والسلاسل اليومية",earn3:"ادعُ أصدقاءك عبر رابطك",
 spend_title:"أنفق",spend1:"تمديد اشتراك Super/Ultimate",spend2:"دورات إضافية في عجلة الحظ",spend3:"إطارات وخلفيات ولون تمييز الملف الشخصي",
 referral_title:"برنامج الإحالة",referral_p:"كل صديق ينضم عبر رابطك يمنحك مكافأة M2 — راجع الشروط الدقيقة في قسم «الإحالات» داخل البوت.",referral_btn:"ادعُ صديقًا",
 account_tg_title:"تسجيل الدخول عبر تيليجرام",account_ton_title:"محفظة TON",account_tg_hello:"مرحبًا،",
+buy_m2_btn:"شراء M2",tier_super_btn:"احصل على Super",tier_ultimate_btn:"احصل على Ultimate",
 lang_title:"لغة الواجهة",
 meta_title:"MI2TARY — مساعد ذكاء اصطناعي في تيليجرام",meta_desc:"MI2TARY — مساعد ذكاء اصطناعي من الجيل الجديد في تيليجرام: محادثة ذكية، توليد صور، ألعاب مصغّرة ونظام نقاط M2.",
 typing_phrases:["ارسم شعارًا لمقهى...","ترجم هذا الملف إلى الإنجليزية...","ما الجديد في الذكاء الاصطناعي هذا الأسبوع...","اقرأ هذا النص بصوت عالٍ...","ساعدني في تخطيط يومي..."]
@@ -1108,13 +1116,14 @@ footer_col_product:"产品",footer_col_social:"保持联系",footer_col_docs:"�
 foot_oferta:"公开要约",foot_terms:"使用条款",foot_privacy:"隐私政策",
 nav_progress:"成长",nav_economy:"经济系统",
 progress_eyebrow:"成长",progress_h2:"等级与成就",
-progress_p:"16 个独特等级——从新手到传奇。每一步都会解锁新的排行榜身份和奖励，而成就则记录你在对话、游戏和邀请中的活跃表现。",
+progress_p:"从 Bronze 到 Elite——等级越高，M2 加成越大。成就记录你在对话、游戏和邀请中的活跃表现。",
 ach_tag1:"活跃度",ach_tag2:"游戏",ach_tag3:"推荐",ach_tag4:"连续打卡",ach_tag5:"收藏",
 economy_eyebrow:"经济系统",economy_h2:"M2 如何运作",
 earn_title:"获取",earn1:"每日任务与小游戏",earn2:"成就与每日连续打卡",earn3:"通过你的链接邀请好友",
 spend_title:"消费",spend1:"续费 Super/Ultimate 订阅",spend2:"额外的转盘次数",spend3:"个人资料边框、背景与强调色",
 referral_title:"推荐计划",referral_p:"每位通过你的链接加入的好友都会为你带来 M2 奖励——具体规则请查看机器人内的「推荐」板块。",referral_btn:"邀请好友",
 account_tg_title:"使用 Telegram 登录",account_ton_title:"TON 钱包",account_tg_hello:"你好，",
+buy_m2_btn:"购买 M2",tier_super_btn:"获取 Super",tier_ultimate_btn:"获取 Ultimate",
 lang_title:"界面语言",
 meta_title:"MI2TARY — Telegram 内的 AI 助手",meta_desc:"MI2TARY——Telegram 内的新一代 AI 助手：智能对话、图像生成、小游戏与 M2 积分系统。",
 typing_phrases:["给咖啡馆画一个标志...","把这份 PDF 翻译成英文...","本周 AI 领域有什么新进展...","把这段文字念出来...","帮我规划一下今天的安排..."]
